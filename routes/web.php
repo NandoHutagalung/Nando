@@ -1,0 +1,55 @@
+<?php
+use App\Http\Controllers\UserController;
+use Illuminate\Support\Facades\Route;
+
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| contains the "web" middleware group. Now create something great!
+|
+*/
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::get('/', function (){
+    return 'Rania';
+});
+
+Route::get('/bebas', function () {
+    echo'<h1 align="HY GUYS!!!</h1>';
+    echo'<p align="center">Welcome To STMIK Bandung</p>';
+    echo'<p align="center">Bersama Kami Mahasiswa STMIK</p>';
+    $backgroundImage = 'url("data:image/jpeg;base64,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")';
+    
+    return "<html>
+                <head>
+                    <style>
+                        body {
+                            background-image: $backgroundImage;
+                            background-size: cover;
+                            background-position: center;
+                            height: 100vh;
+                            margin: 0;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            color: #fff; /* warna teks di atas background */
+                            font-size: 24px;
+                        }
+                    </style>
+                </head>
+                <body>
+                    <div>Babayyy:)</div>
+                </body>
+            </html>";
+});
+Route::get('/route-pertama', function () {
+    return view('index');
+});
+Route::get('/user', [UserController::class, 'index'])->name('Latihan1');
